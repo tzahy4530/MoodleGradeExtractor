@@ -49,7 +49,7 @@ def getExamResult(token,userid,quizid):
             f'{MOODLE_URL}/{WEBSERVICE_URL}wstoken={token}&quizid={quizid}&userid={userid}&moodlewsrestformat=json&wsfunction=mod_quiz_get_user_best_grade')
         results = response.json()
         if results['hasgrade'] == False:
-            return ("Exam results isn't avilable yet.")
+            return ("Exam results isn't available yet.")
         grade = results['grade']
         return (f"Your Grade is: {grade}")
     except:
